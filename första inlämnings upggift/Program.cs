@@ -6,26 +6,113 @@ namespace första_inlämnings_upggift
     {
         static void Main(string[] args)
         {
-            int num1, num2, num3;
-            Console.Write("input the first number to multiply");
-            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("operator");
+            string operator1 = Console.ReadLine();
+            Console.WriteLine("operator 2");
+            string operator2 = Console.ReadLine();
+            Console.WriteLine("term 1");
+            int term1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("term 2");
+            int term2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("term 3");
+            int term3 = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("input the second number to multiply");
-            num2 = Convert.ToInt32(Console.ReadLine());
+            if (operator1 == "+" && operator2 == "+")
+            {
+                int sum = term1 + term2 + term3;
+                Console.WriteLine(sum);
+            }
+            else if (operator1 == "+" && operator2 == "-")
+            {
+                int sum = term1 + term2 - term3;
+                Console.WriteLine(sum);
 
-            Console.Write("input the third number to multiply");
-            num3 = Convert.ToInt32(Console.ReadLine());
+            }
+            else if (operator1 == "+" && operator2 == "*")
+            {
+                int sum = term1 + (term2 * term3);
+                Console.WriteLine(sum);
 
-            int result = num1 * num2 * num3;
-            Console.WriteLine("output: {0} x {1} x {2}= {3}", num1, num2, num3, result);
+            }
+            else if (operator1 == "+" && operator2 == "/")
+            {
+                int sum = (term1 + term2) / term3;
+                Console.WriteLine(sum);
+            }
 
+
+            if (operator1 == "-" && operator2 == "+")
+            {
+                int sum = term1 - term2 + term3;
+                Console.WriteLine(sum);
+            }
+            else if (operator1 == "-" && operator2 == "-")
+            {
+                int sum = term1 - term2 - term3;
+                Console.WriteLine(sum);
+
+            }
+            else if (operator1 == "-" && operator2 == "*")
+            {
+                int sum = term1 - (term2 * term3);
+                Console.WriteLine(sum);
+
+            }
+            else if (operator1 == "-" && operator2 == "/")
+            {
+                int sum = (term1 - term2) / term3;
+                Console.WriteLine(sum);
+            }
+
+
+            if (operator1 == "*" && operator2 == "+")
+            {
+                int sum = (term1 * term2) + term3;
+                Console.WriteLine(sum);
+            }
+            else if (operator1 == "*" && operator2 == "-")
+            {
+                int sum = (term1 * term2) - term3;
+                Console.WriteLine(sum);
+
+            }
+            else if (operator1 == "*" && operator2 == "*")
+            {
+                int sum = term1 * term2 * term3;
+                Console.WriteLine(sum);
+
+            }
+            else if (operator1 == "*" && operator2 == "/")
+            {
+                int sum = (term1 * term2) / term3;
+                Console.WriteLine(sum);
+            }
+
+            if (operator1 == "/" && operator2 == "+")
+            {
+                int sum = term1 / (term2 + term3);
+                Console.WriteLine(sum);
+            }
+            else if (operator1 == "/" && operator2 == "-")
+            {
+                int sum = term1 / (term2 - term3);
+                Console.WriteLine(sum);
+
+            }
+            else if (operator1 == "/" && operator2 == "*")
+            {
+                int sum = term1 / (term2 * term3);
+                Console.WriteLine(sum);
+
+            }
+            else if (operator1 == "/" && operator2 == "/")
+            {
+                int sum = term1 / term2 / term3;
+                Console.WriteLine(sum);
+            }
 
 
         }
 
-        private static string NewMethod()
-        {
-            return Console.ReadLine();
-        }
     }
 }
